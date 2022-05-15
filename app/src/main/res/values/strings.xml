@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">BaldisBasics</string>
+    <string name="first_numb_text">First number:</string>
+    <string name="second_numb_text">Second number:</string>
+    <string name="plus_button_text">+</string>
+    <string name="minus_button_text">-</string>
+    <string name="calc_text">Let\'\s do some math!</string>
+    <string name="result_text"></string>
 </resources>
