@@ -5,11 +5,24 @@ class CuculatorViewModel {
     private var currentFirstString: String = ""
     private var currentSecondString: String = ""
 
-    fun plus(firstNumb: Int, secondNumb: Int):Int {
-        return firstNumb + secondNumb
+    fun plus():Int {
+        return currentFirstString.toInt() + currentSecondString.toInt()
     }
-    fun minus(firstNumb: Int, secondNumb: Int):Int {
-        return firstNumb - secondNumb
+    fun minus():Int {
+        return currentFirstString.toInt() - currentSecondString.toInt()
+    }
+
+    fun umnozh():Int {
+        return currentFirstString.toInt() * currentSecondString.toInt()
+    }
+
+    fun delen():Int {
+        val second = currentSecondString.toInt()
+        if (second != 0) {
+            return currentFirstString.toInt() / currentSecondString.toInt()
+        } else {
+            throw Exception("Ты даун?")
+        }
     }
 
     fun firstObnova(firstNumb: String) {
