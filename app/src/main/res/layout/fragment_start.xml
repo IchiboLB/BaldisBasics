@@ -20,16 +20,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/cuculatorButton"
+        app:layout_constraintStart_toStartOf="@+id/cuculatorButton"
         app:srcCompat="@drawable/how_to_play"
-        tools:layout_editor_absoluteX="74dp"
         tools:layout_editor_absoluteY="473dp" />
 
     <ImageButton
         android:id="@+id/cuculatorButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/title1"
+        app:layout_constraintStart_toStartOf="@+id/title1"
         app:srcCompat="@drawable/start"
         tools:layout_editor_absoluteY="374dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

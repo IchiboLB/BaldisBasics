@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.appcompat.widget.AppCompatButton
+import androidx.appcompat.widget.AppCompatImageButton
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.cornbeer.baldisbasics.R
@@ -20,7 +22,7 @@ class FirstFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val cucButton = view.findViewById<Button>(R.id.cuculatorButton)
+        val cucButton = view.findViewById<AppCompatImageButton>(R.id.cuculatorButton)
         cucButton.setOnClickListener {
             findNavController().navigate(R.id.action_firstFragment_to_cuculatorFragment)
         }
