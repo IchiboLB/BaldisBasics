@@ -30,19 +30,31 @@ class CuculatorFragment: Fragment() {
 
         val buttonPlus = view.findViewById<Button>(R.id.buttonPlus)
         buttonPlus.setOnClickListener {
-            val itog = viewModel.plus()
-            view.findViewById<TextView>(R.id.result).text = itog.toString()
+            try {
+                val itog = viewModel.plus()
+                view.findViewById<TextView>(R.id.result).text = itog.toString()
+            } catch(error: Exception) {
+                view.findViewById<TextView>(R.id.result).text = error.message
+            }
         }
         val buttonMinus = view.findViewById<Button>(R.id.buttonMinus)
         buttonMinus.setOnClickListener {
-            val itog = viewModel.minus()
-            view.findViewById<TextView>(R.id.result).text = itog.toString()
+            try {
+                val itog = viewModel.minus()
+                view.findViewById<TextView>(R.id.result).text = itog.toString()
+            } catch(error: Exception) {
+                view.findViewById<TextView>(R.id.result).text = error.message
+            }
         }
 
         val buttonUmnozh = view.findViewById<Button>(R.id.buttonUmnozh)
         buttonUmnozh.setOnClickListener {
-            val itog = viewModel.umnozh()
-            view.findViewById<TextView>(R.id.result).text = itog.toString()
+            try {
+                val itog = viewModel.umnozh()
+                view.findViewById<TextView>(R.id.result).text = itog.toString()
+            } catch(error: Exception) {
+                view.findViewById<TextView>(R.id.result).text = error.message
+            }
         }
 
         val buttonDelen = view.findViewById<Button>(R.id.buttonDelen)

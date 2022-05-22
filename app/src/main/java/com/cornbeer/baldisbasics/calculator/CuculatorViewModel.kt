@@ -6,17 +6,21 @@ class CuculatorViewModel {
     private var currentSecondString: String = ""
 
     fun plus():Int {
+        checkParameters()
         return currentFirstString.toInt() + currentSecondString.toInt()
     }
     fun minus():Int {
+        checkParameters()
         return currentFirstString.toInt() - currentSecondString.toInt()
     }
 
     fun umnozh():Int {
+        checkParameters()
         return currentFirstString.toInt() * currentSecondString.toInt()
     }
 
     fun delen():Int {
+        checkParameters()
         val second = currentSecondString.toInt()
         if (second != 0) {
             return currentFirstString.toInt() / currentSecondString.toInt()
@@ -31,6 +35,12 @@ class CuculatorViewModel {
 
     fun secondObnova(secondNumb: String) {
         currentSecondString = secondNumb
+    }
+
+    fun checkParameters() {
+        if (currentFirstString == "" || currentSecondString == "") {
+            throw Exception("И как я тебе это посчитаю?")
+        }
     }
 
 }
